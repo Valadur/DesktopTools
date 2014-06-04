@@ -1,4 +1,4 @@
-package andreasgrassl.parser;
+package andreasgrassl.src.parser;
 
 import java.net.URI;
 import java.net.URISyntaxException;

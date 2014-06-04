@@ -7,7 +7,7 @@ import java.io.IOException;
 
 import javax.swing.JTextArea;
 
-import andreasgrassl.parser.StringToURIParser;
+import andreasgrassl.src.parser.StringToURIParser;
 
 public class JTextAreaListener implements KeyListener {
 	
