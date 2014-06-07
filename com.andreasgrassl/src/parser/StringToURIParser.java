@@ -18,17 +18,22 @@ public class StringToURIParser {
 			String[] request = s.split(" ");
 			for (String str : request) {
 				str = str.trim();
-				if (!str.equals("")) {
-					tempString += str + "+";
+				if(!str.equals("")){
+				tempString += str + "+";
 				}
 			}
-			tempString = tempString.trim().replace("\n", "");
-			if (tempString.endsWith("+")) {
-				tempString = tempString.substring(0, tempString.length() - 1);
+			tempString = tempString.replace("\n", "");
+			if (tempString.endsWith("+")){
+				tempString = tempString.substring(0, tempString.length()-1);
 			}
 			try {
 				// System.out.println(":" + tempString + ":");
-				return new URI(tempString);
+				if (tempString.equals("https://www.google.de/#q=")){
+					return new URI("https://www.google.de/");
+				}
+				else{
+					return new URI(tempString);
+				}
 			} catch (URISyntaxException e) {
 				e.printStackTrace();
 			}
