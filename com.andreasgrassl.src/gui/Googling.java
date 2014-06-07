@@ -1,4 +1,4 @@
-package src.gui;
+package gui;
 
 import java.awt.BorderLayout;
 import java.awt.Dimension;
@@ -10,7 +10,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
 
-import src.listeners.JTextAreaListener;
+import listeners.JTextAreaListener;
 
 public class Googling extends JFrame {
 

@@ -7,7 +7,7 @@ import java.net.URISyntaxException;
 
 import org.junit.Test;
 
-import src.parser.StringToURIParser;
+import parser.StringToURIParser;
 
 public class StringToURIParserTest {
 

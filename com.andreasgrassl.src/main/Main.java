@@ -1,8 +1,8 @@
-package src.main;
+package main;
+
+import gui.Googling;
 
 import java.awt.EventQueue;
-
-import src.gui.Googling;
 
 
 public class Main {

@@ -1,4 +1,4 @@
-package src.listeners;
+package listeners;
 
 import java.awt.Desktop;
 import java.awt.event.KeyEvent;
@@ -8,7 +8,7 @@ import java.net.URI;
 
 import javax.swing.JTextArea;
 
-import src.parser.StringToURIParser;
+import parser.StringToURIParser;
 
 public class JTextAreaListener implements KeyListener {
 
