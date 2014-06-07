@@ -40,5 +40,10 @@ public class StringToURIParserTest {
 	public void test6() throws URISyntaxException {
 		assertEquals(new URI("https://www.google.de/#q=Spaces+and+Tabs"), StringToURIParser.parseStringToGoogleRequestURI("	  	Spaces   and 	Tabs		"));
 	}
+	
+	@Test
+	public void test7() throws URISyntaxException {
+		assertEquals(new URI("https://www.google.de/#q=random+test"), StringToURIParser.parseStringToGoogleRequestURI("random test"));
+	}
 
 }
