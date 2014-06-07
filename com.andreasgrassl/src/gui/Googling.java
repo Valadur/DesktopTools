@@ -1,4 +1,4 @@
-package andreasgrassl.src.gui;
+package src.gui;
 
 import java.awt.BorderLayout;
 import java.awt.Dimension;
@@ -10,7 +10,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
 
-import andreasgrassl.src.listeners.JTextAreaListener;
+import src.listeners.JTextAreaListener;
 
 public class Googling extends JFrame {
 

@@ -1,8 +1,8 @@
-package andreasgrassl.src.main;
+package src.main;
 
 import java.awt.EventQueue;
 
-import andreasgrassl.src.gui.Googling;
+import src.gui.Googling;
 
 
 public class Main {

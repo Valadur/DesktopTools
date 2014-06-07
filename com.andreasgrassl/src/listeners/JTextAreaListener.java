@@ -1,19 +1,20 @@
-package andreasgrassl.src.listeners;
+package src.listeners;
 
 import java.awt.Desktop;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.io.IOException;
+import java.net.URI;
 
 import javax.swing.JTextArea;
 
-import andreasgrassl.src.parser.StringToURIParser;
+import src.parser.StringToURIParser;
 
 public class JTextAreaListener implements KeyListener {
-	
+
 	private JTextArea ta;
-	
-	public JTextAreaListener(JTextArea ta){
+
+	public JTextAreaListener(JTextArea ta) {
 		ta.addKeyListener(this);
 		this.ta = ta;
 	}
@@ -28,12 +29,16 @@ public class JTextAreaListener implements KeyListener {
 
 	@Override
 	public void keyReleased(KeyEvent e) {
-//		System.out.println("A key has been released");
-//		System.out.println(e.getKeyCode());
-		
-		if(e.getKeyCode() == KeyEvent.VK_ENTER){
+		// System.out.println("A key has been released");
+		// System.out.println(e.getKeyCode());
+
+		if (e.getKeyCode() == KeyEvent.VK_ENTER) {
 			try {
-				Desktop.getDesktop().browse(StringToURIParser.parseStringToGoogleRequestURI(this.ta.getText()));
+				URI uri = StringToURIParser
+						.parseStringToGoogleRequestURI(this.ta.getText());
+				if (uri != null) {
+					Desktop.getDesktop().browse(uri);
+				}
 				this.ta.setText("");
 			} catch (IOException e1) {
 				e1.printStackTrace();
